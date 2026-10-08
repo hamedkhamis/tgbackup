@@ -15,7 +15,7 @@
         android:label="بک‌آپ تلگرام"
         android:icon="@drawable/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Material3.DayNight.NoActionBar"
+        android:theme="@style/Theme.TgBackup"
         android:requestLegacyExternalStorage="true">
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
@@ -23,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SetupActivity" android:windowSoftInputMode="adjustResize" />
         <service
             android:name="androidx.work.impl.foreground.SystemForegroundService"
             android:foregroundServiceType="dataSync"

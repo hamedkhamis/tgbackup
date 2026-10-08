@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <TextView style="@style/H1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="تنظیمات"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp"
+        android:background="@drawable/bg_hero" android:padding="18dp" android:gravity="center_vertical">
+        <ImageView android:layout_width="52dp" android:layout_height="52dp" android:background="@drawable/bg_icon" android:padding="12dp" android:src="@drawable/ic_send" app:tint="#FFFFFF"/>
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginStart="14dp">
+            <TextView android:id="@+id/connTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/connSub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#D9FFFFFF" android:textSize="12sp"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnReconnect" style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="تغییر"/>
+    </LinearLayout>
+    <TextView style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginStart="6dp" android:layout_marginBottom="6dp" android:text="نحوه ارسال" android:textStyle="bold" android:textColor="@color/brand"/>
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingTop="8dp" android:paddingBottom="8dp">
+            <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/modeGroup" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" app:singleSelection="true" app:selectionRequired="true">
+                <com.google.android.material.button.MaterialButton android:id="@+id/modeDoc" style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="📄 فایل اصلی"/>
+                <com.google.android.material.button.MaterialButton android:id="@+id/modeMedia" style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="🖼 آلبوم"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+            <TextView android:id="@+id/modeHint" style="@style/Sub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="6dp"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/swSplit" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="تقسیم ویدئوهای بزرگ‌تر از ۵۰MB" android:textSize="15sp" android:textColor="@color/text"/>
+            <TextView style="@style/Sub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-6dp" android:layout_marginBottom="6dp" android:text="به تکه‌های ۴۹ مگابایتی ارسال می‌شود (با 7-Zip دوباره یکی می‌شود)"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/swSilent" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="ارسال بی‌صدا" android:textSize="15sp" android:textColor="@color/text"/>
+            <TextView style="@style/Sub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-6dp" android:layout_marginBottom="6dp" android:text="در کانال نوتیفیکیشن نمی‌دهد"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginStart="6dp" android:layout_marginBottom="6dp" android:text="کپشن هر فایل" android:textStyle="bold" android:textColor="@color/brand"/>
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingTop="8dp" android:paddingBottom="8dp">
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/capName" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="نام فایل" android:textSize="15sp" android:textColor="@color/text"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/capDate" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="تاریخ و ساعت گرفتن عکس" android:textSize="15sp" android:textColor="@color/text"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/capFolder" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="نام پوشه (دوربین، واتساپ…)" android:textSize="15sp" android:textColor="@color/text"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/capTag" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="هشتگ ماه و پوشه" android:textSize="15sp" android:textColor="@color/text"/>
+            <TextView style="@style/Sub" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-6dp" android:layout_marginBottom="6dp" android:text="برای جستجوی سریع در کانال، مثل #d2026_10"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginStart="6dp" android:layout_marginBottom="6dp" android:text="بک‌آپ خودکار" android:textStyle="bold" android:textColor="@color/brand"/>
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingTop="8dp" android:paddingBottom="8dp">
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/swAuto" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="بک‌آپ خودکار موارد جدید" android:textSize="15sp" android:textColor="@color/text"/>
+            <TextView android:id="@+id/autoLabel" style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.google.android.material.slider.Slider android:id="@+id/autoSlider" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:valueFrom="1" android:valueTo="24" android:stepSize="1" android:value="6"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/swWifi" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="52dp" android:text="فقط با وای‌فای" android:textSize="15sp" android:textColor="@color/text"/>
+            <LinearLayout android:id="@+id/rowExclude" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp"
+                android:gravity="center_vertical" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:paddingTop="8dp" android:paddingBottom="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="پوشه‌های مستثنا" android:textSize="15sp" android:textColor="@color/text"/>
+                <TextView android:id="@+id/rowExcludeSub" style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="هیچ"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:layout_marginStart="6dp" android:layout_marginBottom="6dp" android:text="نگهداری" android:textStyle="bold" android:textColor="@color/brand"/>
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="18dp" android:paddingEnd="18dp" android:paddingTop="8dp" android:paddingBottom="8dp">
+            <LinearLayout android:id="@+id/rowSkipped" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp"
+                android:gravity="center_vertical" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:paddingTop="8dp" android:paddingBottom="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="تلاش دوباره برای فایل‌های ردشده" android:textSize="15sp" android:textColor="@color/text"/>
+                <TextView android:id="@+id/rowSkippedSub" style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=""/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/rowAbout" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp"
+                android:gravity="center_vertical" android:orientation="vertical" android:background="?attr/selectableItemBackground" android:paddingTop="8dp" android:paddingBottom="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="درباره" android:textSize="15sp" android:textColor="@color/text"/>
+                <TextView android:id="@+id/rowAboutSub" style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="نسخه 2.0"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+</ScrollView>

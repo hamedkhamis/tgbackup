@@ -1,0 +1,14 @@
+<resources>
+    <color name="brand">#2AABEE</color>
+    <color name="brand_dark">#1E88D3</color>
+    <color name="brand_deep">#0B5CAD</color>
+    <color name="accent">#7C4DFF</color>
+    <color name="ok">#22C55E</color>
+    <color name="warn">#F59E0B</color>
+    <color name="danger">#EF4444</color>
+    <color name="bg">#F3F6FB</color>
+    <color name="card">#FFFFFF</color>
+    <color name="text">#0F172A</color>
+    <color name="text2">#64748B</color>
+    <color name="stroke">#E2E8F0</color>
+</resources>

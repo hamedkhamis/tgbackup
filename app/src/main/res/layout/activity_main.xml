@@ -1,57 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent" android:layoutDirection="rtl">
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:orientation="vertical" android:padding="20dp">
-
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="بک‌آپ عکس و ویدئو در تلگرام" android:textSize="22sp" android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="توکن ربات (از BotFather)">
-        <com.google.android.material.textfield.TextInputEditText android:id="@+id/token"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:inputType="textNoSuggestions" android:textDirection="ltr"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
-        android:hint="آیدی کانال (مثلا @mychannel یا -100...)">
-        <com.google.android.material.textfield.TextInputEditText android:id="@+id/chat"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:inputType="textNoSuggestions" android:textDirection="ltr"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
-        android:hint="آدرس API (اختیاری، برای پروکسی)">
-        <com.google.android.material.textfield.TextInputEditText android:id="@+id/api"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:inputType="textUri" android:textDirection="ltr"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <CheckBox android:id="@+id/wifiOnly" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="فقط با وای‌فای" android:layout_marginTop="8dp"/>
-    <CheckBox android:id="@+id/auto" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="بک‌آپ خودکار (هر ۶ ساعت)"/>
-
-    <Button android:id="@+id/btnSave" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="ذخیره و تست اتصال" android:layout_marginTop="12dp"/>
-    <Button android:id="@+id/btnBackup" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="شروع بک‌آپ"/>
-    <Button android:id="@+id/btnStop" style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="match_parent" android:layout_height="wrap_content" android:text="توقف"/>
-    <Button android:id="@+id/btnDelete" style="@style/Widget.Material3.Button.TonalButton"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:layoutDirection="rtl" android:background="@color/bg">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <include android:id="@+id/pageHome" layout="@layout/page_home"/>
+        <include android:id="@+id/pageGallery" layout="@layout/page_gallery" android:visibility="gone"/>
+        <include android:id="@+id/pageSettings" layout="@layout/page_settings" android:visibility="gone"/>
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/nav"
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="حذف فایل‌های بک‌آپ‌شده از گوشی" android:layout_marginTop="12dp"/>
-
-    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" android:textSize="15sp"/>
-    <TextView android:id="@+id/log" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" android:textSize="12sp" android:textDirection="ltr" android:fontFamily="monospace"/>
+        android:background="@color/card" app:menu="@menu/bottom_nav" app:labelVisibilityMode="labeled"/>
 </LinearLayout>
-</ScrollView>

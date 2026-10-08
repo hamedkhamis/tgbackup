@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layoutDirection="rtl" android:fillViewport="true">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="20dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/bg_hero" android:orientation="vertical" android:padding="24dp" android:gravity="center_horizontal">
+        <ImageView android:layout_width="84dp" android:layout_height="84dp" android:src="@drawable/ic_launcher"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+            android:text="بک‌آپ تلگرام" android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"
+            android:gravity="center" android:text="عکس‌ها و ویدئوهات امن در کانال خصوصی خودت\nو گوشی همیشه خالی" android:textColor="#E6FFFFFF" android:textSize="14sp"/>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+        <TextView style="@style/H2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="۱. ربات"/>
+        <TextView style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            android:text="از @BotFather یک ربات بساز و توکنش رو اینجا بذار"/>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tokenBox" android:hint="توکن ربات"
+            app:endIconMode="password_toggle" app:boxCornerRadiusTopStart="14dp" app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusBottomEnd="14dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/token" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textPassword" android:textDirection="ltr"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView style="@style/H2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="۲. کانال"/>
+        <TextView style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+            android:text="ربات رو ادمین کانال کن، یک پیام در کانال بفرست، بعد «پیدا کردن خودکار» رو بزن"/>
+        <com.google.android.material.textfield.TextInputLayout style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="آیدی کانال (-100…)"
+            app:boxCornerRadiusTopStart="14dp" app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp" app:boxCornerRadiusBottomEnd="14dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/chat" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textNoSuggestions" android:textDirection="ltr"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnFind" style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🔍 پیدا کردن خودکار کانال"/>
+
+        <TextView android:id="@+id/advToggle" style="@style/Sub" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:padding="6dp" android:text="⚙ پیشرفته (پروکسی API)"/>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/apiBox" style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="آدرس API (خالی = تلگرام)" android:visibility="gone">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/api" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="textUri" android:textDirection="ltr"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView android:id="@+id/msg" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:gravity="center" android:textSize="14sp"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnConnect" style="@style/BigBtn"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="اتصال و شروع"/>
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnCancel" style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:text="انصراف" android:visibility="gone"/>
+</LinearLayout>
+</ScrollView>
