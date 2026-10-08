@@ -24,6 +24,6 @@ jobs:
         with: { name: TgBackup-apk, path: TgBackup.apk }
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.${{ github.run_number }}
-          name: TgBackup v1.0.${{ github.run_number }}
+          tag_name: v2.0.${{ github.run_number }}
+          name: TgBackup v2.0.${{ github.run_number }}
           files: TgBackup.apk
